@@ -1,6 +1,6 @@
 <?php
 
-namespace CreativeCrafts\LaravelSecureRandomNumberGenerator\Database\Factories;
+namespace CreativeCrafts\SecureRandomNumberGenerator\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

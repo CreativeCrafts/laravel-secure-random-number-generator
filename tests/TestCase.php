@@ -1,10 +1,10 @@
 <?php
 
-namespace CreativeCrafts\LaravelSecureRandomNumberGenerator\Tests;
+namespace CreativeCrafts\SecureRandomNumberGenerator\Tests;
 
+use CreativeCrafts\SecureRandomNumberGenerator\SecureRandomNumberGeneratorServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use CreativeCrafts\LaravelSecureRandomNumberGenerator\LaravelSecureRandomNumberGeneratorServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'CreativeCrafts\\LaravelSecureRandomNumberGenerator\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'CreativeCrafts\\SecureRandomNumberGenerator\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            LaravelSecureRandomNumberGeneratorServiceProvider::class,
+            SecureRandomNumberGeneratorServiceProvider::class,
         ];
     }
 

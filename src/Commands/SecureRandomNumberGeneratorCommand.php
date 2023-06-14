@@ -1,10 +1,10 @@
 <?php
 
-namespace CreativeCrafts\LaravelSecureRandomNumberGenerator\Commands;
+namespace CreativeCrafts\SecureRandomNumberGenerator\Commands;
 
 use Illuminate\Console\Command;
 
-class LaravelSecureRandomNumberGeneratorCommand extends Command
+class SecureRandomNumberGeneratorCommand extends Command
 {
     public $signature = 'laravel-secure-random-number-generator';
 

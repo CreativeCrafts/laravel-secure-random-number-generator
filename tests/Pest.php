@@ -1,5 +1,5 @@
 <?php
 
-use CreativeCrafts\LaravelSecureRandomNumberGenerator\Tests\TestCase;
+use CreativeCrafts\SecureRandomNumberGenerator\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
