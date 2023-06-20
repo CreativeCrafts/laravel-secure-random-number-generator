@@ -16,22 +16,49 @@ You can install the package via composer:
 composer require creativecrafts/laravel-secure-random-number-generator
 ```
 
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-secure-random-number-generator"
-```
-
 This is the contents of the published config file:
 
 ```php
+
 return [
+    /*
+    |--------------------------------------------------------------------------
+    | Default Number Range
+    |--------------------------------------------------------------------------
+    |
+    | This option controls the default number range that will be used
+    | when generating a random number.
+    |
+    */
+
+    'from_number_range' => 1,
+    'to_number_range' => 9999999,
 ];
+
 ```
+
 
 ## Usage
 
 ```php
+use CreativeCrafts\SecureRandomNumberGenerator\SecureRandomNumberGenerator;
+ // Generate a random unique number for a model
+ // To make the number unique for a model, the package uses the model's table name and column name to check if the number is unique in the model's table
+ // The from and to number range can be empty and the package will use the default number range set in the configuration file
+ $tableName = 'users'
+ $tableColumn = 'registration_number';
+ $fromNumberRange = 100;
+ $toNumberRange = 9999999;
+ 
+ $secureUniqueRandomNumber = SecureRandomNumberGenerator::forModel($fromNumberRange, $toNumberRange, $tableName, $tableColumn,)->generate();
+ 
+ // Generate a random number with a default value set in the configuration file
+ $secureRandomNumber = SecureRandomNumberGenerator::useDefaultConfigNumberRange()->generate();
+ 
+ // Generate a random number with a custom number range
+ $fromNumberRange = 100;
+ $toNumberRange = 9999999;
+ $secureRandomNumber = SecureRandomNumberGenerator::setNumberRange($fromNumberRange, $toNumberRange)->generate();
 
 ```
 
