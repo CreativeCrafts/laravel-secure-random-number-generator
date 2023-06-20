@@ -61,13 +61,13 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SecureRandomNumberGeneratorServiceProvider"
+                "CreativeCrafts\\SecureRandomNumberGenerator\\SecureRandomNumberGeneratorServiceProvider"
             ],
             "aliases": {
-                "SecureRandomNumberGenerator": "SecureRandomNumberGenerator"
+                "SecureRandomNumberGenerator": "CreativeCrafts\\SecureRandomNumberGenerator\\SecureRandomNumberGenerator"
             }
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
