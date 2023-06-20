@@ -64,6 +64,12 @@ use CreativeCrafts\SecureRandomNumberGenerator\SecureRandomNumberGenerator;
  $fromNumberRange = 100;
  $toNumberRange = 9999999;
  $secureRandomNumber = SecureRandomNumberGenerator::setNumberRange($fromNumberRange, $toNumberRange)->generate();
+ 
+ // Generate a random unique number for a model using the default number range set in the configuration file
+ $tableName = 'users'
+ $tableColumn = 'registration_number';
+ 
+ $secureUniqueRandomNumber = SecureRandomNumberGenerator::forModelUsingDefaultConfigNumberRange($tableName, $tableColumn)->generate();
 
 ```
 

@@ -27,6 +27,11 @@ class SecureRandomNumberGenerator
         return new self($fromNumberRange, $toNumberRange, $tableName, $tableColumnName);
     }
 
+    public static function forModelUsingDefaultConfigNumberRange(string $tableName, string $tableColumnName): self
+    {
+        return new self(self::fromRangeNumber(), self::toRangeNumber(), $tableName, $tableColumnName);
+    }
+
     public function generate(): int
     {
         $randomizer = new Randomizer(new Secure());

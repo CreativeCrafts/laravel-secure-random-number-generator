@@ -16,3 +16,8 @@ it('can generate a secure random unique number for model', function () {
     $uniqueRandomNumber = SecureRandomNumberGenerator::forModel(1, 100, 'users', 'registration_number')->generate();
     expect($uniqueRandomNumber)->toBeInt();
 })->skip('This test will fail because the table users does not exist in the database.');
+
+it('can generate a secure random unique number for model using default configuration', function () {
+    $uniqueRandomNumber = SecureRandomNumberGenerator::forModelUsingDefaultConfigNumberRange('users', 'registration_number')->generate();
+    expect($uniqueRandomNumber)->toBeInt();
+})->skip('This test will fail because the table users does not exist in the database.');
