@@ -16,6 +16,11 @@ You can install the package via composer:
 composer require creativecrafts/laravel-secure-random-number-generator
 ```
 
+You can publish the config file with:
+```bash
+php artisan vendor:publish --tag="secure-random-number-generator-config"
+```
+
 This is the contents of the published config file:
 
 ```php
