@@ -13,3 +13,7 @@ All notable changes to `laravel-secure-random-number-generator` will be document
 ## 0.0.3 - 2023-06-20
 
 - added command to publish the configuration file in the README file
+
+## 0.0.4 - 2023-06-20
+
+- updated composer packages
