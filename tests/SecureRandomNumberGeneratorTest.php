@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use CreativeCrafts\SecureRandomNumberGenerator\SecureRandomNumberGenerator;
 
 it('can generate a secure random number', function () {

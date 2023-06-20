@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace CreativeCrafts\SecureRandomNumberGenerator\Tests;
 
 use CreativeCrafts\SecureRandomNumberGenerator\SecureRandomNumberGeneratorServiceProvider;

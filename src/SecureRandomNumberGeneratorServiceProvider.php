@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace CreativeCrafts\SecureRandomNumberGenerator;
 
 use Spatie\LaravelPackageTools\Package;
