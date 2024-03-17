@@ -25,3 +25,7 @@ All notable changes to `laravel-secure-random-number-generator` will be document
 ## 0.0.6 - 2023-06-20
 
 - added declare strict types using pint
+
+## 1.0.0 - 2024-03-17
+
+- Added support for Laravel 11
