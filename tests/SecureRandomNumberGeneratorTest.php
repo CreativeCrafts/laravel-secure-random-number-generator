@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use CreativeCrafts\SecureRandomNumberGenerator\SecureRandomNumberGenerator;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 
 it('can generate a secure random number', function () {

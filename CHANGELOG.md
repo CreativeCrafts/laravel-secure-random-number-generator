@@ -29,3 +29,17 @@ All notable changes to `laravel-secure-random-number-generator` will be document
 ## 1.0.0 - 2024-03-17
 
 - Added support for Laravel 11
+
+## 1.1.0 - 2025-03-03
+
+- Added support for Laravel 12
+- Added these new methods:
+  - `generateBatch`
+  - `generateFormatted`
+  - `generateWithPattern`
+  - `uniqueIn`
+  - `generateBatchFormatted`
+  - `generateBatchWithPattern`
+  - `min`
+  - `max`
+- Added new trait
